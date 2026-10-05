@@ -1,0 +1,26 @@
+package org.example.thewitcher.model.entity.player;
+
+import org.example.thewitcher.model.items.Armor;
+import org.example.thewitcher.model.items.Item;
+
+public class ArmorPlayerDecorator extends PlayerDecorator {
+    private Armor armor;
+
+    public ArmorPlayerDecorator(Player player, Item armor) {
+        super(player);
+        getEquipment().removeItem(armor);
+        this.armor = new Armor(armor.getName());
+        this.armor = Armor.parse(armor);
+        equip();
+    }
+
+    @Override
+    public void equip() {
+        if (getAppliedEquipment().getArmor() != null) {
+            takeOff(player, getAppliedEquipment().getArmor());
+        }
+        getAppliedEquipment().setArmor(armor);
+        getAppliedEquipment().addToList(armor.getName().toLowerCase());
+        setArmor(getArmor() + getAppliedEquipment().getArmor().getBonus());
+    }
+}
