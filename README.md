@@ -1,4 +1,4 @@
-# The Witcher Game — AGH OOP Project
+# The Witcher Game — AGH Object-Oriented Programming Project
 
 A command-line RPG inspired by The Witcher universe, developed as an academic group project.
 
@@ -16,7 +16,7 @@ The game includes several types of NPCs, each providing different interactions:
 - **Innkeeper** — provides services at the inn
 - **Sorceress** — provides quests
 
-The player can also encounter enemies like Ghouls, Wolves and Bandits and engage in combat.
+The player can also encounter enemies like Ghouls, Wolves and Bandits and engage in combat with them.
 
 The game includes an inventory and equipment system, allowing the player to collect, purchase and use various items, equip different armor and weapons, and manage their resources.
 
@@ -26,7 +26,7 @@ The current game state can be saved to and loaded from a `.dat` file, allowing t
 
 ## My role
 
-It is a two-person academic group project.
+This was a two-person academic group project.
 
 My main responsibilities included:
 
